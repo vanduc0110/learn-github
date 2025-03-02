@@ -1,0 +1,6 @@
+// git init : Khởi tạo một kho lưu trữ git trống
+git clone <URL> : clone dự án từ xa
+git status: Xem trạng thái sự thay đổi trong thư mục làm việc.
+git add <tên_tệp> Thêm tệp/tập tin vào Git (staging).
+git add . Thêm tất cả tệp/tập tin thay đổi vào Git (staging).
+git commit -m "Thông điệp commit" Lưu các thay đổi vào Git.
