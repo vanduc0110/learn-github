@@ -1,13 +1,43 @@
 // git init : Khởi tạo một kho lưu trữ git trống
 git clone <URL> : clone dự án từ xa
 git status: Xem trạng thái sự thay đổi trong thư mục làm việc.
-git add <tên_tệp> Thêm tệp/tập tin vào Git (staging).
-git add . Thêm tất cả tệp/tập tin thay đổi vào Git (staging).
-git commit -m "Thông điệp commit" Lưu các thay đổi vào Git.
- git diff Xem sự thay đổi trong các tệp/tập tin.
- git push origin <tên_nhánh> Gửi các thay đổi lên kho lưu trữ xa.
- git pull origin <tên_nhánh> Lấy sự thay đổi từ kho lưu trữ xa.
- git checkout -b <tên_nhánh_mới> Tạo một nhánh mới và chuyển đến nhánh đó.
- git checkout <tên_nhánh> Chuyển đổi giữa các nhánh.
- git checkout <ID_commit> Tạo và chuyển sang một nhánh từ một commit cụ thể (detached HEAD).
- git branch -a Xem danh sách tất cả các nhánh cục bộ và nhánh từ xa
+git add <tên_tệp>: Thêm tệp/tập tin vào Git (staging).
+git add . : Thêm tất cả tệp/tập tin thay đổi vào Git (staging).
+git commit -m "Thông điệp commit" : Lưu các thay đổi vào Git.
+ git diff : Xem sự thay đổi trong các tệp/tập tin.
+ git push origin <tên_nhánh> : Gửi các thay đổi lên kho lưu trữ xa.
+ git pull origin <tên_nhánh>: Lấy sự thay đổi từ kho lưu trữ xa.
+ git checkout -b <tên_nhánh_mới> :Tạo một nhánh mới và chuyển đến nhánh đó.
+ git checkout <tên_nhánh> :Chuyển đổi giữa các nhánh.
+ git checkout <ID_commit>: Tạo và chuyển sang một nhánh từ một commit cụ thể (detached HEAD).
+ git branch -a :Xem danh sách tất cả các nhánh cục bộ và nhánh từ xa
+ git remote add origin <tên_nhánh> <URL> : kết nối từ máy lên url để đẩy dữ liệu máy lên lưu trữ ( repository )
+ git branch -d <tên_nhánh> :Xóa một nhánh cục bộ đã được hợp nhất
+ git branch -D <tên_nhánh> :Xóa một nhánh cục bộ chưa được hợp nhất
+ git branch <tên_nhánh_mới> :Tạo một nhánh từ một nhánh khác (không chuyển đến nhánh mới).
+ git branch :Xem danh sách các nhánh cục bộ.
+ git branch -m <tên_nhánh_cũ> <tên_nhánh_mới> :Đổi tên một nhánh cục bộ.
+ git log Xem lịch sử commit.
+ 
+ git log <tên_nhánh> Xem lịch sử commit trên một nhánh cụ thể.
+ git log --oneline Xem lịch sử commit dưới dạng một dòng cho mỗi commit.
+ git rm <tên_tệp> Xóa các tệp/tập tin khỏi Git (đã bỏ tracking).
+ git rm --cached <tên_tệp> Xóa tệp/tập tin khỏi Git (vẫn còn tracking).
+ git reset <tên_tệp> Bỏ tệp đã thêm ra khỏi staging arae 
+ git stash Tạo và áp dụng một stash (lưu trữ tạm thời các thay đổi chưa commit).
+ git stash apply Ap dụng lại stash.
+ git stash list Xem danh sách các stash đã tạo.
+ git stash drop <stash_index Xóa một stash cụ thể.
+ git stash save --keep-index Tạo và áp dụng một ghim (chứa thay đổi tạm thời nhưng không xóa khỏi stash).
+ git stash branch <tên_nhánh_mới> Tạo một nhánh mới từ stash và áp dụng stash vào nhánh mới.
+ git stash clear Xóa tất cả stash.
+ git show <ID_commit> Xem thông tin về một commit cụ thể.
+ git show <tên_nhãn> Xem thông tin về một nhãn cụ thể
+
+  git tag -a <tên_nhãn> -m "Thông điệp tag" <ID_commit> Tạo và quản lý nhãn (tag) cho các commit cụ thể.
+ git tag Xem danh sách các nhãn đã tạo.
+ git tag -d <tên_nhãn> Xóa một nhãn cục bộ hoặc từ xa.
+ git tag -a <tên_nhãn> <ID_commit> Tạo một nhãn (tag) cho một commit cụ thể.
+ git merge <tên_nhánh> Merge các thay đổi từ một nhánh khác vào nhánh hiện tại.
+ git fetch -- all Lấy tất cả các nhánh trên reponsitory về local
+ git revert 
